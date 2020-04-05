@@ -33,6 +33,7 @@ export class MyView3 extends PolymerElement {
       routeData: Object,
       subroute: Object,
       dynamicPath: String,
+      googleRoot: String
     };
   }
 
@@ -49,6 +50,7 @@ export class MyView3 extends PolymerElement {
     if (route !== 'view3') {
       return;
     }
+    this.googleRoot = "https://www.google.com/search?q="
     this.page = subroute ? 'dynamic-subview' : 'index';
     this.dynamicPath = subroute || '';
   }
@@ -64,6 +66,13 @@ export class MyView3 extends PolymerElement {
   _showPage404() {
     this.page = 'index';
   }
+
+  _insertSiteOperator() {
+    if (!this.dynamicPath.includes('site:')) {
+      this.dynamicPath = 'site:www.stackoverflow.com ' + this.dynamicPath;
+    }
+  }
+
 }
 
 window.customElements.define(MyView3.is, MyView3);

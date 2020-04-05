@@ -29,11 +29,11 @@ module.exports = (production) => ({
 
     // Your application name.
     // This will be used as the default title of your index
-    name: env.APP_NAME || 'My App',
+    name: env.APP_NAME || 'GSA',
 
     // Your application description.
     // This will be used as your description meta tag
-    description: env.APP_DESCRIPTION || 'My App description',
+    description: env.APP_DESCRIPTION || 'Add UX to Google Searches',
 
     // Whether to transpile the app for older browsers or not.
     transpile: env.APP_TRANSPILE || false,

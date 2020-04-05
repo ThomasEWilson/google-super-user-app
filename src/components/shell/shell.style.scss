@@ -17,8 +17,14 @@ app-header {
     --paper-icon-button-ink-color: #fff;
   }
 }
+app-box {
+  display: block;
+  height: 90vh;
+}
 
 .drawer-list {
+  display: inline-flex;
+  align-items: center;
   margin: 0 20px;
 
   a {
@@ -33,4 +39,9 @@ app-header {
       font-weight: bold;
     }
   }
+}
+
+.card {
+  display: flex;
+  padding: 10px 0;
 }

@@ -54,12 +54,9 @@ export class MyApp extends PolymerElement {
   _routePageChanged(page: string) {
     // If no page was found in the route data, page will be an empty string.
     // Default to 'view1' in that case.
-    this.page = page || 'view1';
+    this.page = page || 'view3';
 
     // Close a non-persistent drawer when the page & route are changed.
-    if (!this.$.drawer.persistent) {
-      this.$.drawer.close();
-    }
   }
 
   _pageChanged(page: string) {
@@ -73,4 +70,5 @@ export class MyApp extends PolymerElement {
   _showPage404() {
     this.page = 'view404';
   }
+
 }

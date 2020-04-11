@@ -31,7 +31,6 @@ export class MyView3 extends PolymerElement {
       },
       route: Object,
       routeData: Object,
-      subroute: Object,
       dynamicPath: String,
       googleRoot: String
     };
@@ -51,8 +50,7 @@ export class MyView3 extends PolymerElement {
       return;
     }
     this.googleRoot = "https://www.google.com/search?q="
-    this.page = subroute ? 'dynamic-subview' : 'index';
-    this.dynamicPath = subroute || '';
+    this.dynamicPath = '';
   }
 
   _pageChanged(page: string) {
